@@ -75,7 +75,7 @@ class knn:
         Returns:
             np.ndarray: Predicted class labels.
         """
-        y = np.zeros((X.shape[0], 1))
+        y = np.zeros((X.shape[0],))
 
         for i in range(len(X)):
             vals = 0
@@ -138,7 +138,7 @@ class knn:
         Returns:
             np.ndarray: distance from point to each point in the training dataset.
         """
-        y = np.zeros((self.x_train.shape[0], 1))
+        y = np.zeros((self.x_train.shape[0],))
         for j in range(len(self.x_train)):
             dist = minkowski_distance(point, self.x_train[j], p=self.p)
             y[j] = dist
